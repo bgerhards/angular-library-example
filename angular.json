@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "ngx-ghard-comp": {
+      "projectType": "library",
+      "root": "projects/ngx-ghard-comp",
+      "sourceRoot": "projects/ngx-ghard-comp/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-ghard-comp/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-ghard-comp/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-ghard-comp/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-ghard-comp/src/test.ts",
+            "tsConfig": "projects/ngx-ghard-comp/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-ghard-comp/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ngx-ghard-comp"
 }

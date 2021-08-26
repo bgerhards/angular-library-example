@@ -11,6 +11,12 @@
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
+    "paths": {
+      "ngx-ghard-comp": [
+        "dist/ngx-ghard-comp/ngx-ghard-comp",
+        "dist/ngx-ghard-comp"
+      ]
+    },
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
